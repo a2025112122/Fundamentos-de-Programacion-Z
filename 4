@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int RH, RM, RS;  
+    int H1, H2, m1, m2, s1, s2; 
+    do {
+    printf("Ingrese la hora 1(hh:mm:ss)--> ");
+    scanf("%d:%d:%d", &H1, &m1, &s1);
+    printf("Ingrese la hora 2(hh:mm:ss) --> ");
+    scanf("%d:%d:%d", &H2, &m2, &s2);
+    if (H1 >= 24 && H2 >= 24 && m1 >= 60 && m2 >= 60 && s1 >= 60 && s2 >= 60);{
+            printf("Hora inválida, ingréselas nuevamente.\n"); }
+}while(H1 >= 24 && H2 >= 24 && m1 >= 60 && m2 >= 60 && s1 >= 60 && s2 >= 60);
+    RH=H1-H2;
+    RM=m1-m2;
+    RS=s1-s2;
+     printf("La hora resultante es: %d:%d:%d/n",RH,RM,RS);
+
+    return 0;
+}
