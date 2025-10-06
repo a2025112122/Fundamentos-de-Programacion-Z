@@ -1,0 +1,27 @@
+ #include <stdio.h>
+
+int main() {
+    int N;  
+    int m, c, d, u; 
+
+    printf("Ingresa un numero entero positivo menor que 10000: ");
+    scanf("%d", &N);
+
+    if (N < 0 && N >= 10000) {
+        printf("Error: el numero debe ser positivo y menor que 10000.\n");
+        return 0;
+    }
+
+    // Descomposición usando divisiones y módulo
+    m = N / 1000;         // unidades de mil
+    c = (N % 1000) / 100; // centenas
+    d = (N % 100) / 10;   // decenas
+    u = N % 10;           // unidades
+
+    printf("Desglose del numero %d:\n", N);
+    printf("Unidades de mil: %d\n", m);
+    printf("Centenas: %d\n", c);
+    printf("Decenas: %d\n", d);
+    printf("Unidades: %d\n", u);
+    return 0;
+}
