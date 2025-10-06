@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main(){
+    float A,B,C,D,E,F,det,DX,DY,X,Y;
+    int caso;
+    printf("SISTEMA DE ECUACIONES LINEALES\n");
+    printf("Forma: AX + BY = C\n");
+    printf("       DX + EY = F\n\n");
+
+    printf("Ingrese A, B, C: ");
+    scanf("%f %f %f", &A, &B, &C);
+
+    printf("Ingrese D, E, F: ");
+    scanf("%f %f %f", &D, &E, &F);
+    
+    det=A*E-B*D;
+    DX =C*E-B*F;
+    DY =A*F-C*D;
+    
+    if (det!= 0) caso = 1;
+    else if (DX == 0 && DY==0) caso = 2;
+    else caso = 3;
+  
+  switch (caso){
+  case 1:
+            X = DX/det;
+            Y = DY/det;
+            printf("solucion unica:\n");
+            printf("X = %.2f, Y = %.2f\n",X,Y);
+    break;
+  case 2:
+    printf("tiene infinitas soluciones\n");
+    break;
+    
+  case 3:
+        printf("no tiene soluciones.\n");
+            
+            break;
+
+    default:
+            printf("Error en el sistema.\n");
+            break;
+}
+    return 0;
+}
