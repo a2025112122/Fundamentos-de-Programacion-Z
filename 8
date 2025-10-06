@@ -1,0 +1,75 @@
+#include <stdio.h>
+int main(){
+    int opcion, cantidad;
+    float precio, subtotal, total=0;
+    char continuar,s,n;
+    
+    do{
+    printf("         MENU\n");
+    printf("1.Hamburguesas simple 3Bs.\n");
+    printf("2.Hamburguesas con queso  5Bs.\n");
+    printf("3.Papas Fritas  2Bs.\n");
+    printf("4.Soda  2.5Bs.\n");
+    printf("5.Salir\n");
+
+    printf("elige una opcion (1-5):");
+    scanf("%d", &opcion);
+    
+  
+  switch (opcion){
+  case 1:
+            precio=3;
+            printf("¿Cuántas hamburguesas deseas?\n");
+            scanf("%d", &cantidad);
+            subtotal = precio * cantidad;
+                total=total + subtotal;
+                printf("Subtotal: %.2f Bs\n", subtotal);
+            break;
+  case 2:
+            precio=5;
+            printf("¿Cuántas hamburguesas con queso deseas?\n");
+            scanf("%d", &cantidad);
+            subtotal = precio * cantidad;
+                total=total + subtotal;
+                printf("Subtotal: %.2f Bs\n", subtotal);
+            break;
+    
+  case 3:
+            precio=2;
+            printf("¿Cuántas porciones de papa frita deseas?\n");
+            scanf("%d", &cantidad);
+            subtotal = precio * cantidad;
+                total=total + subtotal;
+                printf("Subtotal: %.2f Bs\n", subtotal);
+            break;
+    
+  case 4:
+            precio=2.50;
+            printf("¿Cuántas sodas deseas?\n");
+            scanf("%d", &cantidad);
+            subtotal = precio * cantidad;
+                total=total + subtotal;
+                printf("Subtotal: %.2f Bs\n", subtotal);
+            break;
+  case 5:
+            printf("Gracias por visitarnos, vuelve pronto :)\n");
+            break;
+  default:
+            printf("Opción inválida. Intenta de nuevo.\n");
+            break;
+    }
+    
+    if (opcion != 5) {
+            printf("¿Deseas agregar otro producto? (s/n): ");
+            scanf("  %c", &continuar);
+        } else {
+            continuar = 'n';
+        }
+
+    } while (continuar == 's');
+
+    printf("\nTotal a pagar: %.2f Bs\n", total);
+    printf("Gracias por tu compra !!!\n");
+
+    return 0;
+}
