@@ -1,0 +1,64 @@
+ #include <stdio.h>
+
+int main() {
+    int DD,MM,AA;
+
+
+    printf("Ingresa ingrese una fecha formato (dd:mm:aa)");
+    scanf("%d:%d:%d", &DD, &MM, &AA);
+
+    if(DD<=31&&MM<=12){
+      switch(MM){
+        case 1:
+        case 2:
+            printf("es verano\n");
+            break;
+        case 3:
+            if(DD<=21){
+                printf("es otoño\n");
+            }
+            else{
+                printf("es verano\n");}
+            break;
+        case 4:
+        case 5:
+             printf("es otoño\n");
+             break;
+        case 6:
+            if(DD<=21){
+                printf("es invierno\n");
+            }
+            else{
+                printf("es otoño\n");}
+            break;
+        case 7:
+        case 8:
+             printf("es invierno\n");
+             break;
+        case 9:
+            if(DD<=21){
+                printf("es invierno\n");
+            }
+            else{
+                printf("es primavera\n");}
+            break;
+        case 10:
+        case 11:
+             printf("es primavera\n");
+             break;
+         case 12:
+            if(DD<=21){
+                printf("es primavera\n");
+            }
+            else{
+                printf("es verano\n");}
+            break;
+    }
+    }
+    else{
+        printf("ingrese una fecha válida.\n");
+    }
+
+
+    return 0;
+}
