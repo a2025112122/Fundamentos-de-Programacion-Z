@@ -39,7 +39,7 @@ printf("X1 = %.2f", X1);
         printf("no hay soluciones reales.\n");
             printf("soluciones complejas:\n");
             printf("X1 = %.2f + %.2fi\n", PR, PI);
-            printf("X12 = %.2f - %.2fi\n", PR, PI);
+            printf("X2 = %.2f - %.2fi\n", PR, PI);
             break;
     }
     default:
